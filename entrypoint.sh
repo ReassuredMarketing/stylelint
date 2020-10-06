@@ -4,7 +4,7 @@ set -e
 
 configPath="./"
 indentSpaces=4
-pattern="*.scss"
+pattern="**/*.{css,scss,sass}"
 
 if [ ! -z "${CONFIG_PATH}" ]; then
   configPath=$CONFIG_PATH
@@ -16,7 +16,7 @@ if [ ! -z "${PATTERN}" ]; then
   pattern=$PATTERN
 fi
 
-stylelint_path="./src"
+stylelint_path="node_modules/.bin/stylelint"
 if [ ! -e stylelint_path ]; then
   yarn add stylelint stylelint-config-standard --silent
 fi
