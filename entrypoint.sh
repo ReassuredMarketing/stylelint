@@ -16,7 +16,7 @@ if [ ! -z "${PATTERN}" ]; then
   pattern=$PATTERN
 fi
 
-stylelint_path="node_modules/.bin/stylelint"
+stylelint_path="./src"
 if [ ! -e stylelint_path ]; then
   yarn add stylelint stylelint-config-standard --silent
 fi
