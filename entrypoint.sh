@@ -3,8 +3,8 @@
 set -e
 
 configPath="./"
-indentSpaces=2
-pattern="*.css"
+indentSpaces=4
+pattern="*.scss"
 
 if [ ! -z "${CONFIG_PATH}" ]; then
   configPath=$CONFIG_PATH
