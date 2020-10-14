@@ -31,7 +31,9 @@ if [ ! "$(echo ${configPath}.stylelintrc*)" != "${configPath}.stylelintrc*" ]; t
 }" > .stylelintrc
 fi
 
+echo "=================================="
 echo "${stylelint_path}" >> $GITHUB_PATH
-
 echo $pattern
+echo "=================================="
+
 sh -c "$stylelint_path $pattern"
