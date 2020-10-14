@@ -4,7 +4,8 @@ set -e
 
 configPath="./"
 indentSpaces=4
-pattern="**/*.{css,scss,sass}"
+pattern="*.scss"
+
 
 if [ ! -z "${CONFIG_PATH}" ]; then
   configPath=$CONFIG_PATH
@@ -30,7 +31,7 @@ if [ ! "$(echo ${configPath}.stylelintrc*)" != "${configPath}.stylelintrc*" ]; t
 }" > .stylelintrc
 fi
 
-echo ::addPath::${stylelint_path}
+echo "${stylelint_path}" >> $GITHUB_PATH
 
 echo $pattern
 sh -c "$stylelint_path $pattern"
