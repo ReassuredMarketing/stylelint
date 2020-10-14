@@ -1,6 +1,13 @@
 #!/bin/sh
 set -e
 
+pattern="./src/**/*.scss"
+
+if [ ! -z "${PATTERN}" ]; then
+  echo "== ${PATTERN} =="
+  pattern=$PATTERN
+fi
+
 stylelint_path="node_modules/.bin/stylelint"
 if [ ! -e stylelint_path ]; then
   yarn add stylelint stylelint-config-standard --silent
