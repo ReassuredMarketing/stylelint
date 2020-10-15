@@ -7,6 +7,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 RUN npm install --save-dev stylelint stylelint-config-standard
 
+RUN npm install stylelint-order --save-dev
+
 COPY "entrypoint.sh" "/entrypoint.sh"
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
