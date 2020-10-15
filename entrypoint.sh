@@ -7,4 +7,4 @@ echo "=================================="
 echo "Scanning ${pattern}"
 echo "=================================="
 
-npx stylelint "${pattern}"
+npx stylelint #"${pattern}"
